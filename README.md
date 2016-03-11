@@ -7,6 +7,10 @@
 
 ## 프로젝트에 추가.
 ```
+
+jcenter 를 통해 배포하고 싶은데 계속 잘 안되고 있음.......
+아, 힘들다... ㅋ
+
 dependencies {
 	compile 'com.kokohapps.hwtabbariosstyle:1.0'
 }
