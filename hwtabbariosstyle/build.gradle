@@ -1,12 +1,21 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
 
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.3.5'
+    }
+}
+
 
 publish {
     userOrg = 'vowed21'
     groupId = 'com.kokohapps'
     artifactId = 'hwtabbariosstyle'
-    publishVersion = '1.0'
+    publishVersion = '1.2'
     desc = 'Tabbar for ViewPager (Android), iOSStyle'
     website = 'https://github.com/vowed21/HWTabbariOSStyle'
     repository = "${website}.git"
@@ -20,8 +29,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 12
+        versionName "1.2"
     }
     buildTypes {
         release {
