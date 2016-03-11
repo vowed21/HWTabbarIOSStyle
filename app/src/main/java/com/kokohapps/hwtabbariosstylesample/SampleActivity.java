@@ -16,7 +16,6 @@ import android.widget.TextView;
 
 import com.kokohapps.hwtabbariosstyle.HWTabbar;
 
-import java.util.ArrayList;
 
 public class SampleActivity extends FragmentActivity {
 
@@ -33,15 +32,10 @@ public class SampleActivity extends FragmentActivity {
 
         tabbar = (HWTabbar) findViewById(R.id.tabbarController);
 
-        ArrayList<String> titleArr = new ArrayList<>();
-        ArrayList<Integer> imgSrcArr = new ArrayList<>();
-        ArrayList<Integer> selectedImgSrcArr = new ArrayList<>();
+        String[] titleArr = {"탭", "탭22", "탭3333", "탭4444"};
+        Integer[] imgSrcArr = {R.drawable.off, R.drawable.off, R.drawable.off, R.drawable.off};
+        Integer[] selectedImgSrcArr = {R.drawable.on, R.drawable.on, R.drawable.on, R.drawable.on};
 
-        for(int i=0; i<4; i++){
-            titleArr.add("Page "+i);
-            imgSrcArr.add(R.drawable.off);
-            selectedImgSrcArr.add(R.drawable.on);
-        }
 
 
         try {

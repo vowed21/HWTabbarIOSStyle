@@ -32,13 +32,13 @@ public class HWTabbar extends LinearLayout {
     }
 
 
-    public void initTabbar(ViewPager viewPager, ArrayList<String> titleArr, ArrayList<Integer>imgSrcArr, ArrayList<Integer> selectedImgSrcArr, int selectedColor) throws Exception{
+    public void initTabbar(ViewPager viewPager, String[] titleArr, Integer[] imgSrcArr, Integer[] selectedImgSrcArr, int selectedColor) throws Exception{
         mViewPager = viewPager;
 
         this.setBackgroundColor(Color.rgb(239, 239, 244));
 
         int pagerCount = viewPager.getAdapter().getCount();
-        if(!(pagerCount == titleArr.size() && pagerCount == imgSrcArr.size() && pagerCount == selectedImgSrcArr.size())){
+        if(!(pagerCount == titleArr.length && pagerCount == imgSrcArr.length && pagerCount == selectedImgSrcArr.length)){
             throw new Exception("Must PageCount == titleArr.size() == imgSrcArr.size() == selectedImgSrcArr.size()");
         }
         else if(pagerCount > 6){
@@ -50,7 +50,7 @@ public class HWTabbar extends LinearLayout {
         TabClickListener clickListener = new TabClickListener();
 
         for(int i=0; i<pagerCount; i++) {
-            HWTabbarItem item = new HWTabbarItem(getContext(), titleArr.get(i), imgSrcArr.get(i), selectedImgSrcArr.get(i), selectedColor, i);
+            HWTabbarItem item = new HWTabbarItem(getContext(), titleArr[i], imgSrcArr[i], selectedImgSrcArr[i], selectedColor, i);
             LayoutParams params = new LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT, 1);
             item.setLayoutParams(params);
             this.addView(item);

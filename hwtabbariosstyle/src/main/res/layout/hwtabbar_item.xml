@@ -16,16 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:scaleType="centerInside"
+            android:scaleType="fitCenter"
             />
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
-            android:layout_height="16dp"
+            android:layout_height="18dp"
             android:singleLine="true"
             android:gravity="center"
-            android:textSize="9sp"
-            android:text="텍스트"
+            android:textSize="10sp"
             android:textColor="#959595"
             />
     </LinearLayout>
