@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,24 +38,22 @@ public class SampleActivity extends FragmentActivity {
         ArrayList<Integer> selectedImgSrcArr = new ArrayList<>();
 
         for(int i=0; i<4; i++){
-            titleArr.add("포지션"+i);
-            imgSrcArr.add(R.drawable.img1);
-            selectedImgSrcArr.add(R.drawable.img2);
+            titleArr.add("Page "+i);
+            imgSrcArr.add(R.drawable.off);
+            selectedImgSrcArr.add(R.drawable.on);
         }
 
 
         try {
-            tabbar.initTabbar(viewPager, titleArr, imgSrcArr, selectedImgSrcArr, Color.RED);
+            tabbar.initTabbar(viewPager, titleArr, imgSrcArr, selectedImgSrcArr, Color.BLUE);
         }
         catch (Exception e){
             e.printStackTrace();
         }
 
 
-        tabbar.setBadge(1, "23");
-        tabbar.setBadge(3, "444");
+        tabbar.setBadge(2, "Wow~!");
         tabbar.setBadge(0, "1");
-
 
 
     }
@@ -105,7 +104,9 @@ public class SampleActivity extends FragmentActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
             TextView tv = new TextView(getActivity());
-            tv.setText("포지션"+position);
+            tv.setText("PAGE "+position);
+            tv.setGravity(Gravity.CENTER);
+            tv.setTextSize(30);
             return tv;
         }
     }
