@@ -1,11 +1,23 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'vowed21'
+    groupId = 'com.kokohapps'
+    artifactId = 'hwtabbar-ios-style'
+    publishVersion = '1.1'
+    desc = ''
+    website = 'https://github.com/vowed21/HWTabbariOSStyle'
+    issueTracker = "${website}/issues"
+    repository = "${website}.git"
+}
+
 
 android {
     compileSdkVersion 22
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.kokohapps.hwtabbar_ios_style_master"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
@@ -23,5 +35,4 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:22.+'
-    compile project(':hwtabbar-ios-style')
 }
