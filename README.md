@@ -6,15 +6,15 @@
 
 
 ## 프로젝트에 추가.
+
+Module.Gradle 에 설정.
+
 ```
-
-jcenter 를 통해 배포하고 싶은데 계속 잘 안되고 있음.......
-아, 힘들다... ㅋ
-
-dependencies {
-	compile 'com.kokohapps.hwtabbariosstyle:1.0'
+dependencies 
+{
+	...
+	compile 'com.kokohapps:hwtabbar-ios-style:1.1'
 }
-하면 될것으로 예상되는데, 아직 jcenter 에 적용되기 전이므로. jcenter 에 올라가면 확인하고 수정할게요 ㅋ
 ```
 
 
